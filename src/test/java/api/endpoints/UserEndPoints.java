@@ -39,6 +39,7 @@ public class UserEndPoints {
         Response response=given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
+                .pathParam("username",userName)
                 .body(payload)
                 .when()
                 .put(routes.update_url);
